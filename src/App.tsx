@@ -10,7 +10,6 @@ import ProjectCard from "./components/ProjectCard";
 import ContactButton from "./components/ContactButton";
 import ScrollButton from "./components/ScrollButton";
 import { useEffect, useState } from "react";
-import ReactTyped from "react-typed";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -95,16 +94,7 @@ function App() {
                 </div>
                 <div className={style.data_cnt}>
                   <h1 className={style.title}>
-                    Hi, I'm{" "}
-                    <ReactTyped
-                      strings={["<b>Damiano Nicolussi</b>"]}
-                      typeSpeed={67}
-                      onComplete={(self: { cursor: { remove: () => any } }) => {
-                        setTimeout(() => {
-                          self.cursor.remove();
-                        }, 1500);
-                      }}
-                    />
+                    Hi, I'm <b>Damiano Nicolussi</b>
                   </h1>
                   <p className={style.description}>
                     Computer, Communication and Electronic Engineering student
