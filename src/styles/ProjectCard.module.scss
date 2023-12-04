@@ -1,0 +1,88 @@
+.card {
+    width: 450px;
+    border-radius: 16px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 3px 11px 5px #f6f8fa;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    text-align: left;
+    padding: 15px 15px 10px 15px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.footer {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.code {
+    color: #3972A2;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.code_cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 3px 11px 5px #f6f8fa;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: .8rem;
+    font-weight: 500;
+    padding: 0 10px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 3px 11px 5px #f6f8fa;
+    height: 2.5rem;
+}
+
+.button:hover {
+    background-color: #f6f8fa;
+    transition: all 0.3s ease-out;
+}
+
+.links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@media only screen and (max-width:660px){
+    .card {
+        width: 100%;
+    }
+
+    .title, .desc {
+        font-size: .9rem;
+    }
+}

@@ -1,0 +1,65 @@
+.github {
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 3px 11px 5px #f6f8fa;
+}
+
+.githubtxt {
+    text-align: center;
+}
+
+.github_profile {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+}
+
+.desc {
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.button {
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 400;
+    color: #000;
+    border: 1px solid #ebebeb;
+    border-radius: 5px;
+    padding: 3px 7px;
+}
+
+.button:hover {
+    background-color: #f6f8fa;
+    transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 1050px) {
+    .github {
+        margin-top: 25px;
+        width: 100%;
+        width: fit-content;
+    }
+
+    .githubtxt {
+        font-size: .8rem;
+    }
+}

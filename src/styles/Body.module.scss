@@ -1,0 +1,369 @@
+.body {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_container {
+    width: 8%;
+    height: 100vh;
+    display: flex;
+    gap: 12vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.cnt_container {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.setting {
+    height: 85%;
+    position: absolute;
+    display: flex;
+    align-items: last baseline;
+    z-index: -1;
+    opacity: 0;
+}
+
+.sec_home, .section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home, .about, .projects, .contacts {
+    width: 82%;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 5vh;
+}
+
+.image_cnt {
+    width: 20%;
+    height: 20%;
+}
+
+.image_cnt img {
+    width: 100%;
+    height: 100%;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.description {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.logos {
+    text-decoration: none;
+}
+
+.logo_cnt {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.media {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.media:hover {
+    width: 32%;
+}
+
+.media:hover .logo_desc {
+    opacity: 1;
+    transition: opacity 0.4s ease-in;
+}
+
+.icon {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.4s ease-in;
+}
+
+.icon > * {
+    vertical-align: middle;
+}
+
+.logo {
+    font-size: 2rem;
+    line-height: 60px;
+    color:#000;
+    transition: all 0.3s ease-out;
+}
+
+.logo_desc {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000;
+    opacity: 0;
+}
+
+.description u {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project_list {
+    width: 50%;
+}
+
+.carousel {
+    margin-top: 5vh;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.mailto {
+    margin-top: 45px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+.mailto a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+  }
+
+.mailto a::before {
+    content: '';
+    background-color: #FFC107;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 0;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+  }
+  
+  .mailto a:hover::before {
+    bottom: 2;
+    height: 8px;
+  }
+
+.socialbtn {
+    margin-top: 25px;
+    display: flex;
+    gap: 20px;
+}
+
+@media only screen and (max-width:660px){
+    .body {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .nav_container{
+        display: none;
+    }
+
+    .setting{
+        display: none;
+    }
+
+    .cnt_container{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .home{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .image_cnt{
+        width: 60%;
+        height: 60%;
+    }
+
+    .sec_home {
+        margin-top: -5vh;
+        margin-bottom: -5vh;
+    }
+    
+    .section {
+        height: fit-content;
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+
+    .media:hover {
+        width: 60px;
+    }
+
+    .home, .about, .projects, .contacts{
+        margin-left: 3vh;
+        margin-right: 3vh;
+        justify-content: center;
+    }
+
+    .home .title {
+        font-size: 2.3rem;
+    }
+
+    .home .description {
+        font-size: 1.4rem;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project_list {
+        width: 100%;
+    }
+
+    .carousel {
+        margin-top: 20px;
+    }
+
+    .github {
+        margin-top: 25px;
+    }
+
+    .socialbtn {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width:660px) and (max-width:1050px){
+    .body {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav_container{
+        height: fit-content;
+        width: 100%;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px 2px #fff;
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .setting{
+        display: none;
+    }
+
+    .sec_home {
+        margin-top: -8vh;
+    }
+
+    .cnt_container{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .image_cnt {
+        width: 70%;
+        height: 70%;
+    }
+
+    .media:hover {
+        width: 60px;
+    }
+
+    .home, .about, .projects, .contacts{
+        margin-left: 5vh;
+        margin-right: 5vh;
+        justify-content: center;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project_list {
+        width: 100%;
+    }
+
+    .carousel {
+        margin-top: 25px;
+    }
+
+    .github {
+        width: 95%;
+        margin-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
