@@ -12,7 +12,7 @@ interface ProjectInfo {
 const ProjectCard = (props: ProjectInfo) => {
   return (
     <div className={style.card}>
-      <img src={`./src/assets/projects/${props.bg}.png`} alt={props.title} />
+      <img src={`/images/projects/${props.bg}.png`} alt={props.title} />
       <div className={style.content}>
         <p className={style.title}>{props.title}</p>
         <p className={style.desc}>

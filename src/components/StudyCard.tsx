@@ -14,7 +14,7 @@ const StudyCard = (props: CardInfo) => {
       <div className={style.card}>
         <div className={style.main}>
           <div className={style.image_cnt}>
-            <img src={`./src/assets/logos/${props.img}.svg`} alt={props.img} />
+            <img src={`/images/logos/${props.img}.svg`} alt={props.img} />
           </div>
           <div className={style.data_cnt}>
             <p className={style.title}>{props.title}</p>

@@ -9,7 +9,7 @@ const CurrentWork = (props: Work) => {
   return (
     <div className={style.content}>
       <img
-        src={`./src/assets/icon/${props.icon}.png`}
+        src={`/images/icon/${props.icon}.png`}
         alt={props.icon}
         className={style.logo}
       />

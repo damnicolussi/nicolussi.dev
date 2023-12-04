@@ -90,7 +90,7 @@ function App() {
             <div data-section className={style.sec_home} id="home">
               <div className={style.home}>
                 <div className={style.image_cnt}>
-                  <img src="./src/assets/pfp.png" alt="me" />
+                  <img src="/images/pfp.png" alt="me" />
                 </div>
                 <div className={style.data_cnt}>
                   <h1 className={style.title}>
