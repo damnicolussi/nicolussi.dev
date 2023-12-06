@@ -261,16 +261,20 @@
         font-size: 2.3rem;
     }
 
-    .home .description {
-        font-size: 1.4rem;
+    .home {
+        .description {
+            font-size: 1.4rem;
+        }
     }
 
     .title {
         font-size: 2rem;
     }
 
-    .description {
-        font-size: 1rem;
+    .about, .projects, .contacts{
+        .description {
+            font-size: .95rem;
+        }
     }
 
     .projects {
