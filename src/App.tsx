@@ -97,7 +97,7 @@ function App() {
                     Hi, I'm <b>Damiano Nicolussi</b>
                   </h1>
                   <p className={style.description}>
-                    Computer, Communication and Electronic Engineering student
+                    Computer, Communications and Electronic Engineering student
                     at University of Trento
                   </p>
                   <div className={style.logo_cnt}>
