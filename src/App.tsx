@@ -200,6 +200,7 @@ function App() {
                       <ProjectCard
                         bg="dae-locator-bg"
                         title="DAE Locator"
+                        desc="DAE Locator is a Telegram Bot in Python that helps you find the nearest defibrillators around you thanks to the data saved in OpenStreetMap."
                         url="dae-locator"
                         useit="https://t.me/daelocator_bot"
                       >
