@@ -212,7 +212,7 @@ function App() {
 
                 <div className={style.github}>
                   <GithubC />
-                  <CurrentWork icon="dae-locator" link="DAE Locator" />
+                  <CurrentWork icon="trentino-traffic" link="TrentinoTraffic" />
                 </div>
               </div>
             </div>
