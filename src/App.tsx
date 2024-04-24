@@ -218,6 +218,7 @@ function App() {
                         url="trentinotraffic"
                         subtitle="Visit Website"
                         useit="https://trentinotraffic.nicolussi.dev"
+                        comingSoon
                       >
                         <FaPython />
                         <FaReact />

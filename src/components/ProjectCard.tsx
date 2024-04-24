@@ -9,6 +9,7 @@ interface ProjectInfo {
   subtitle?: string;
   useit?: string;
   children: React.ReactNode;
+  comingSoon?: boolean;
 }
 
 const iconColors: { [key: string]: string } = {
@@ -77,22 +78,28 @@ const ProjectCard = (props: ProjectInfo) => {
               </span>
             )}
           </div>
-          <div className={style.links}>
-            <a
-              className={style.button}
-              href={`https://github.com/damnicolussi/${props.url}`}
-              target="_blank"
-            >
-              View in GitHub
+          {props.comingSoon ? (
+            <a className={style.button} style={{ cursor: "wait" }}>
+              Coming Soon ...
             </a>
-            {props.useit !== undefined ? (
-              <a className={style.button} href={props.useit} target="_blank">
-                {props.subtitle}
+          ) : (
+            <div className={style.links}>
+              <a
+                className={style.button}
+                href={`https://github.com/damnicolussi/${props.url}`}
+                target="_blank"
+              >
+                View in GitHub
               </a>
-            ) : (
-              ""
-            )}
-          </div>
+              {props.useit !== undefined ? (
+                <a className={style.button} href={props.useit} target="_blank">
+                  {props.subtitle}
+                </a>
+              ) : (
+                ""
+              )}
+            </div>
+          )}
         </div>
       </div>
     </div>
