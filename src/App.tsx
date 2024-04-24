@@ -1,6 +1,6 @@
 import NavItem from "./components/NavItem";
 import style from "./styles/Body.module.scss";
-import { FaGithub, FaPython } from "react-icons/fa";
+import { FaGithub, FaPython, FaReact } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import StudyCard from "./components/StudyCard";
@@ -10,6 +10,7 @@ import ProjectCard from "./components/ProjectCard";
 import ContactButton from "./components/ContactButton";
 import ScrollButton from "./components/ScrollButton";
 import { useEffect, useState } from "react";
+import Carousel from "./components/Carousel";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -196,18 +197,33 @@ function App() {
                   <p className={style.description}>
                     Here are some of my projects, both personal and academic.
                     I'm always open to new ideas and collaborations!
-                    <div className={style.carousel}>
+                  </p>
+                  <div className={style.car}>
+                    <Carousel>
                       <ProjectCard
                         bg="dae-locator-bg"
                         title="DAE Locator"
                         desc="DAE Locator is a Telegram Bot in Python that helps you find the nearest defibrillators around you thanks to the data saved in OpenStreetMap."
                         url="dae-locator"
+                        subtitle="Use the Bot"
                         useit="https://t.me/daelocator_bot"
                       >
                         <FaPython />
                       </ProjectCard>
-                    </div>
-                  </p>
+
+                      <ProjectCard
+                        bg="trentinotraffic-bg"
+                        title="TrentinoTraffic"
+                        desc="TrentinoTraffic is a Python script designed for real-time vehicle counting using YOLOv8 and OpenCV. It analyzes webcam frames provided by viaggiareintrentino.it."
+                        url="trentinotraffic"
+                        subtitle="Visit Website"
+                        useit="https://trentinotraffic.nicolussi.dev"
+                      >
+                        <FaPython />
+                        <FaReact />
+                      </ProjectCard>
+                    </Carousel>
+                  </div>
                 </div>
 
                 <div className={style.github}>

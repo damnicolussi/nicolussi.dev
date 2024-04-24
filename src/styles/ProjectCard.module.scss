@@ -1,6 +1,7 @@
 .card {
     width: 450px;
     border-radius: 16px;
+    background-color: #fff;
     border: 1px solid #ebebeb;
     box-shadow: 0 3px 11px 5px #f6f8fa;
     overflow: hidden;
@@ -34,21 +35,22 @@ img {
 }
 
 .code {
-    color: #3972A2;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 3px 11px 5px #f6f8fa;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .code_cnt {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 5px;
-    border: 1px solid #ebebeb;
-    box-shadow: 0 3px 11px 5px #f6f8fa;
-    width: 2.5rem;
-    height: 2.5rem;
+    gap: .5rem;
 }
 
 .button {
@@ -80,6 +82,11 @@ img {
 @media only screen and (max-width:660px){
     .card {
         width: 100%;
+    }
+
+    .code {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 0;
     }
 
     .title, .desc {

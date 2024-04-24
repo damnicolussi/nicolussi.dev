@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import style from "../styles/ProjectCard.module.scss";
 
 interface ProjectInfo {
@@ -6,11 +6,46 @@ interface ProjectInfo {
   title: string;
   desc: string;
   url: string;
+  subtitle?: string;
   useit?: string;
   children: React.ReactNode;
 }
 
+const iconColors: { [key: string]: string } = {
+  FaPython: "#3972A2",
+  FaReact: "#087A9F",
+};
+
 const ProjectCard = (props: ProjectInfo) => {
+  const getIconColor = (child: React.ReactNode) => {
+    if (React.isValidElement(child)) {
+      const iconName = (
+        child.type as React.ComponentType<any>
+      ).name?.toString();
+      return iconColors[iconName] || "";
+    }
+    return "";
+  };
+
+  const [currentChild, setCurrentChild] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth <= 660 && React.Children.count(props.children) > 1) {
+      const interval = setInterval(() => {
+        setIsVisible(false);
+        setTimeout(() => {
+          setCurrentChild(
+            (currentChild) =>
+              (currentChild + 1) % React.Children.count(props.children)
+          );
+          setIsVisible(true);
+        }, 500);
+      }, 5000);
+      return () => clearInterval(interval);
+    }
+  }, []);
+
   return (
     <div className={style.card}>
       <img src={`/images/projects/${props.bg}.png`} alt={props.title} />
@@ -19,7 +54,28 @@ const ProjectCard = (props: ProjectInfo) => {
         <p className={style.desc}>{props.desc}</p>
         <div className={style.footer}>
           <div className={style.code_cnt}>
-            <p className={style.code}>{props.children}</p>
+            {window.innerWidth > 660 ? (
+              React.Children.map(props.children, (child: React.ReactNode) => (
+                <span
+                  className={style.code}
+                  style={{ color: getIconColor(child) }}
+                >
+                  {child}
+                </span>
+              ))
+            ) : (
+              <span
+                className={style.code}
+                style={{
+                  color: getIconColor(
+                    React.Children.toArray(props.children)[currentChild]
+                  ),
+                  opacity: isVisible ? 1 : 0,
+                }}
+              >
+                {React.Children.toArray(props.children)[currentChild]}
+              </span>
+            )}
           </div>
           <div className={style.links}>
             <a
@@ -31,7 +87,7 @@ const ProjectCard = (props: ProjectInfo) => {
             </a>
             {props.useit !== undefined ? (
               <a className={style.button} href={props.useit} target="_blank">
-                Use the Bot
+                {props.subtitle}
               </a>
             ) : (
               ""
