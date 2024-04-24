@@ -150,7 +150,7 @@ function App() {
 
             <div data-section className={style.section} id="about">
               <div className={style.about}>
-                <h1 className={style.title}>About Me</h1>
+                <h2 className={style.title}>About Me</h2>
                 <p className={style.description}>
                   My name is <u>Damiano Nicolussi</u>, I am <u>19 years old</u>,
                   and I am currently a student in the{" "}
@@ -193,7 +193,7 @@ function App() {
             <div data-section className={style.section} id="projects">
               <div className={style.projects}>
                 <div className={style.project_list}>
-                  <h1 className={style.title}>Projects</h1>
+                  <h2 className={style.title}>Projects</h2>
                   <p className={style.description}>
                     Here are some of my projects, both personal and academic.
                     I'm always open to new ideas and collaborations!
@@ -238,7 +238,7 @@ function App() {
 
             <div data-section className={style.section} id="contacts">
               <div className={style.contacts}>
-                <h1 className={style.title}>Contact Me</h1>
+                <h2 className={style.title}>Contact Me</h2>
                 <p className={style.description}>
                   If you wish to contact me, you can reach me here:
                 </p>
