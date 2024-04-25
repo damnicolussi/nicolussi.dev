@@ -208,7 +208,7 @@ function App() {
                         subtitle="Use the Bot"
                         useit="https://t.me/daelocator_bot"
                       >
-                        <FaPython />
+                        <FaPython color="3972A2" />
                       </ProjectCard>
 
                       <ProjectCard
@@ -220,8 +220,8 @@ function App() {
                         useit="https://trentinotraffic.nicolussi.dev"
                         comingSoon
                       >
-                        <FaPython />
-                        <FaReact />
+                        <FaPython color="3972A2" />
+                        <FaReact color="087A9F" />
                       </ProjectCard>
                     </Carousel>
                   </div>

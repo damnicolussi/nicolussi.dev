@@ -23,7 +23,7 @@ const ProjectCard = (props: ProjectInfo) => {
       const iconName = (
         child.type as React.ComponentType<any>
       ).name?.toString();
-      console.log(iconColors[iconName]);
+      // console.log(iconColors[iconName]);
       return iconColors[iconName] || "";
     }
     return "";
@@ -60,7 +60,7 @@ const ProjectCard = (props: ProjectInfo) => {
               React.Children.map(props.children, (child: React.ReactNode) => (
                 <span
                   className={style.code}
-                  style={{ color: getIconColor(child) }}
+                  // style={{ color: getIconColor(child) }}
                 >
                   {child}
                 </span>
