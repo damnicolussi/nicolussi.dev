@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
 import GitHubCalendar from "react-github-calendar";
 import style from "../styles/GithubC.module.scss";
 import { FaGithub } from "react-icons/fa";
 
 const GithubC = () => {
+  const [totalCount_git, setTotalCount_git] = useState<number>(0);
+
+  useEffect(() => {
+    fetch("https://github-contributions-api.jogruber.de/v4/damnicolussi?y=last")
+      .then((response) => response.json())
+      .then((data) => setTotalCount_git(data.total.lastYear));
+  }, []);
+
+  console.log(totalCount_git);
+
   const selectLastHalfYear = (contributions: any[]) => {
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
@@ -46,6 +57,10 @@ const GithubC = () => {
           colorScheme="light"
           hideColorLegend
           hideMonthLabels
+          // labels={{
+          //   totalCount: "{{count}} contributions in the last six months",
+          // }}
+          totalCount={totalCount_git}
           transformData={selectLastHalfYear}
         />
       </div>
