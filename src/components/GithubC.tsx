@@ -12,7 +12,7 @@ const GithubC = () => {
       .then((data) => setTotalCount_git(data.total.lastYear));
   }, []);
 
-  console.log(totalCount_git);
+  // console.log(totalCount_git);
 
   const selectLastHalfYear = (contributions: any[]) => {
     const currentYear = new Date().getFullYear();
@@ -61,6 +61,7 @@ const GithubC = () => {
           //   totalCount: "{{count}} contributions in the last six months",
           // }}
           totalCount={totalCount_git}
+          weekStart={1}
           transformData={selectLastHalfYear}
         />
       </div>
