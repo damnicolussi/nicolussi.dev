@@ -13,7 +13,7 @@ interface ProjectInfo {
 }
 
 const ProjectCard = (props: ProjectInfo) => {
-  const iconColors: { [key: string]: string } = {
+  let iconColors: { [key: string]: string } = {
     FaPython: "#3972A2",
     FaReact: "#087A9F",
   };
