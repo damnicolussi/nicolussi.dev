@@ -12,17 +12,18 @@ interface ProjectInfo {
   comingSoon?: boolean;
 }
 
-const iconColors: { [key: string]: string } = {
-  FaPython: "#3972A2",
-  FaReact: "#087A9F",
-};
-
 const ProjectCard = (props: ProjectInfo) => {
+  const iconColors: { [key: string]: string } = {
+    FaPython: "#3972A2",
+    FaReact: "#087A9F",
+  };
+
   const getIconColor = (child: React.ReactNode) => {
     if (React.isValidElement(child)) {
       const iconName = (
         child.type as React.ComponentType<any>
       ).name?.toString();
+      console.log(iconColors[iconName]);
       return iconColors[iconName] || "";
     }
     return "";
