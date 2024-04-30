@@ -66,13 +66,20 @@
 
     .nav {
         font-size: 1.5rem;
+        top: 96%;
+        padding: .5rem;
+        border-radius: 10px;
+        border: 1px solid #ebebeb;
+        box-shadow: 0 3px 11px 5px #f6f8fa;
+
         &.left {
-          transform: translateX(-60%) translatey(-50%);
+          left: 0;
+          transform: translateX(250%);
         }
 
         &.right {
           right: 0;
-          transform: translateX(60%) translatey(-50%);
+          transform: translateX(-250%);
         }
     }
 }
