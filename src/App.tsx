@@ -152,7 +152,7 @@ function App() {
               <div className={style.about}>
                 <h2 className={style.title}>About Me</h2>
                 <p className={style.description}>
-                  My name is <u>Damiano Nicolussi</u>, I am <u>19 years old</u>,
+                  My name is <u>Damiano Nicolussi</u>, I am <u>20 years old</u>,
                   and I am currently a student in the{" "}
                   <u>
                     Bachelor's degree program in "Computer, Communications, and
