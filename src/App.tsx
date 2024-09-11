@@ -11,6 +11,7 @@ import ContactButton from "./components/ContactButton";
 import ScrollButton from "./components/ScrollButton";
 import { useEffect, useState } from "react";
 import Carousel from "./components/Carousel";
+import Typewriter from "react-ts-typewriter";
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -110,7 +111,14 @@ function App() {
                 </div>
                 <div className={style.data_cnt}>
                   <h1 className={style.title}>
-                    Hi, I'm <b>Damiano Nicolussi</b>
+                    Hi, I'm{" "}
+                    <b>
+                      <Typewriter
+                        text={"Damiano Nicolussi"}
+                        speed={100}
+                        cursor={false}
+                      />
+                    </b>
                   </h1>
                   <p className={style.description}>
                     Computer, Communications and Electronic Engineering student
