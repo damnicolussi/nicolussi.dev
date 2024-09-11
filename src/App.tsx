@@ -16,6 +16,21 @@ function App() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
+    const sections = document.querySelectorAll("[data-section]");
+    const windowHeight = window.innerHeight;
+    const windowWidth = window.innerWidth;
+
+    sections.forEach((section: Element) => {
+      const sectionHeight = (section as HTMLElement).offsetHeight;
+
+      if (windowWidth > 1550 && sectionHeight > windowHeight) {
+        (section as HTMLElement).style.marginTop = `15vh`;
+        (section as HTMLElement).style.marginBottom = `15vh`;
+      }
+    });
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
