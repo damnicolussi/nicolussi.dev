@@ -286,6 +286,9 @@ function App() {
                     <FaLinkedin />
                   </ContactButton>
                 </div>
+                <p className={style.copyr}>
+                  &copy; {new Date().getFullYear()} Damiano Nicolussi
+                </p>
               </div>
             </div>
           </div>
