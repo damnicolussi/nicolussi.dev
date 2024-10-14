@@ -235,7 +235,7 @@ function App() {
                     Here are some of my projects, both personal and academic.
                     I'm always open to new ideas and collaborations!
                   </p>
-                  <div className={style.car}>
+                  <div className={style.car} data-aos="fade-in">
                     <Carousel>
                       <ProjectCard
                         bg="dae-locator-bg"
