@@ -12,6 +12,10 @@ import ScrollButton from "./components/ScrollButton";
 import { useEffect, useState } from "react";
 import Carousel from "./components/Carousel";
 import Typewriter from "react-ts-typewriter";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 function App() {
   const [activeSection, setActiveSection] = useState("");
@@ -171,7 +175,12 @@ function App() {
             </div>
             {/* end of section */}
 
-            <div data-section className={style.section} id="about">
+            <div
+              data-section
+              className={style.section}
+              id="about"
+              data-aos="fade-in"
+            >
               <div className={style.about}>
                 <h2 className={style.title}>About Me</h2>
                 <p className={style.description}>
@@ -213,7 +222,12 @@ function App() {
 
             {/* end of section */}
 
-            <div data-section className={style.section} id="projects">
+            <div
+              data-section
+              className={style.section}
+              id="projects"
+              data-aos="fade-in"
+            >
               <div className={style.projects}>
                 <div className={style.project_list}>
                   <h2 className={style.title}>Projects</h2>
@@ -258,14 +272,25 @@ function App() {
 
             {/* end of section */}
 
-            <div data-section className={style.section} id="contacts">
+            <div
+              data-section
+              className={style.section}
+              id="contacts"
+              data-aos="fade-in"
+            >
               <div className={style.contacts}>
                 <h2 className={style.title}>Contact Me</h2>
                 <p className={style.description}>
                   If you wish to contact me, you can reach me here:
                 </p>
                 <div className={style.mailto}>
-                  <a href="mailto:damiano@nicolussi.dev" target="_blank">
+                  <a
+                    href="mailto:damiano@nicolussi.dev"
+                    target="_blank"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-easing="ease-in"
+                  >
                     damiano@nicolussi.dev
                   </a>
                 </div>
@@ -286,7 +311,11 @@ function App() {
                     <FaLinkedin />
                   </ContactButton>
                 </div>
-                <p className={style.copyr}>
+                <p
+                  className={style.copyr}
+                  data-aos="fade-in"
+                  data-aos-delay="500"
+                >
                   &copy; {new Date().getFullYear()} Damiano Nicolussi
                 </p>
               </div>

@@ -34,7 +34,7 @@ const GithubC = () => {
   };
 
   return (
-    <div className={style.github}>
+    <div className={style.github} data-aos="fade-left">
       <p className={style.githubtxt}>All my projects are available on GitHub</p>
 
       <div className={style.github_profile}>

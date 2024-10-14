@@ -11,7 +11,7 @@ interface CardInfo {
 const StudyCard = (props: CardInfo) => {
   return (
     <>
-      <div className={style.card}>
+      <div className={style.card} data-aos="fade-right" data-aos-duration="500">
         <div className={style.main}>
           <div className={style.image_cnt}>
             <img src={`/images/logos/${props.img}.svg`} alt={props.img} />

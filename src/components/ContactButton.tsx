@@ -9,7 +9,15 @@ interface ContactData {
 
 const ContactButton = (props: ContactData) => {
   return (
-    <a className={style.button} href={props.link} target="_blank">
+    <a
+      className={style.button}
+      href={props.link}
+      target="_blank"
+      data-aos="fade-up"
+      data-aos-duration="500"
+      data-aos-easing="ease-in"
+      data-aos-delay="50"
+    >
       <p className={style.logo}>{props.children}</p>
       <div>
         <p className={style.link}>{props.platform}</p>

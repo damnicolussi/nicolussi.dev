@@ -7,7 +7,7 @@ interface Work {
 
 const CurrentWork = (props: Work) => {
   return (
-    <div className={style.content}>
+    <div className={style.content} data-aos="fade-left">
       <img
         src={`/images/icon/${props.icon}.png`}
         alt={props.icon}
