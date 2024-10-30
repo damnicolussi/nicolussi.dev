@@ -3,6 +3,7 @@ import style from "./styles/Body.module.scss";
 import { FaGithub, FaPython, FaReact } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { TbBrandFiverr } from "react-icons/tb";
 import StudyCard from "./components/StudyCard";
 import GithubC from "./components/GithubC";
 import CurrentWork from "./components/CurrentWork";
@@ -309,6 +310,14 @@ function App() {
                     user="damiano-nicolussi"
                   >
                     <FaLinkedin />
+                  </ContactButton>
+
+                  <ContactButton
+                    link="https://fiverr.com/users/damnicolussi/"
+                    platform="Fiverr"
+                    user="damnicolussi"
+                  >
+                    <TbBrandFiverr />
                   </ContactButton>
                 </div>
                 <p
