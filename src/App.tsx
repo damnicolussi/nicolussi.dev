@@ -1,6 +1,6 @@
 import NavItem from "./components/NavItem";
 import style from "./styles/Body.module.scss";
-import { FaGithub, FaPython, FaReact } from "react-icons/fa";
+import { FaGithub, FaPython, FaReact, FaRust } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { TbBrandFiverr } from "react-icons/tb";
@@ -259,6 +259,16 @@ function App() {
                       >
                         <FaPython color="3972A2" />
                         <FaReact color="087A9F" />
+                      </ProjectCard>
+
+                      <ProjectCard
+                        bg="bettercalldrone-bg"
+                        title="BetterCallDrone"
+                        desc="BetterCallDrone is the final project for the Advanced Programming course at UniTN. It consists of a virtual drone designed to handle communication between clients and servers in a virtual network."
+                        url="BetterCallDrone"
+                        comingSoon
+                      >
+                        <FaRust color="F74B00" />
                       </ProjectCard>
                     </Carousel>
                   </div>

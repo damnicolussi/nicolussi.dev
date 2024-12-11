@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "../styles/ProjectCard.module.scss";
+import { FaRust } from "react-icons/fa";
 
 interface ProjectInfo {
   bg: string;
@@ -16,6 +17,7 @@ const ProjectCard = (props: ProjectInfo) => {
   let iconColors: { [key: string]: string } = {
     FaPython: "#3972A2",
     FaReact: "#087A9F",
+    FaRust: "#F74B00",
   };
 
   const getIconColor = (child: React.ReactNode) => {
