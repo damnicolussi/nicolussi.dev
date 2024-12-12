@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import style from "../styles/ProjectCard.module.scss";
-import { FaRust } from "react-icons/fa";
 
 interface ProjectInfo {
   bg: string;
